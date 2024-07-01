@@ -1,6 +1,6 @@
 # CMI Stats Checker
 
-This is a fullstack [Next.js](https://nextjs.org/) project that create for user using [CMI](https://polymart.org/resource/cmi.228) plugin.
+This is a fullstack [Next.js](https://nextjs.org/) project using [ZSA](https://zsa.vercel.app/docs/introduction) that create for user using [CMI](https://polymart.org/resource/cmi.228) plugin.
 It's a simple project that feel free to use it.
 
 ## Reminder
