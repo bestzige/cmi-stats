@@ -1,0 +1,118 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Inventories {
+  id          Int     @id @default(autoincrement())
+  player_id   Int?
+  inventories String? @db.LongText
+
+  @@map("CMI_inventories")
+}
+
+model Playtime {
+  id        Int     @id @default(autoincrement())
+  player_id Int?
+  date      Int?
+  h0        BigInt?
+  h1        BigInt?
+  h2        BigInt?
+  h3        BigInt?
+  h4        BigInt?
+  h5        BigInt?
+  h6        BigInt?
+  h7        BigInt?
+  h8        BigInt?
+  h9        BigInt?
+  h10       BigInt?
+  h11       BigInt?
+  h12       BigInt?
+  h13       BigInt?
+  h14       BigInt?
+  h15       BigInt?
+  h16       BigInt?
+  h17       BigInt?
+  h18       BigInt?
+  h19       BigInt?
+  h20       BigInt?
+  h21       BigInt?
+  h22       BigInt?
+  h23       BigInt?
+
+  @@map("CMI_playtime")
+}
+
+model PlaytimeReward {
+  id         Int     @id @default(autoincrement())
+  player_id  Int?
+  repeatable String? @db.Text
+  onetime    String? @db.LongText
+
+  @@map("CMI_playtimereward")
+}
+
+model Users {
+  id                  Int      @id @default(autoincrement())
+  player_uuid         String?  @db.Text
+  username            String?  @db.Text
+  nickname            String?  @db.Text
+  LogOutLocation      String?  @db.Text
+  DeathLocation       String?  @db.Text
+  TeleportLocation    String?  @db.Text
+  Homes               String?  @db.Text
+  LastLoginTime       BigInt?
+  LastLogoffTime      BigInt?
+  TotalPlayTime       BigInt?
+  tFly                BigInt?
+  tGod                BigInt?
+  Glow                String?  @db.Text
+  Ips                 String?  @db.Text
+  Cuffed              Boolean?
+  AlertUntil          BigInt?
+  AlertReason         String?  @db.Text
+  JoinedCounter       Boolean?
+  LockedIps           String?  @db.Text
+  pTime               BigInt?
+  Kits                String?  @db.Text
+  Charges             String?  @db.Text
+  Cooldowns           String?  @db.MediumText
+  Balance             Float?
+  Notes               String?  @db.Text
+  Rank                String?  @db.Text
+  BannedUntil         BigInt?
+  BannedAt            BigInt?
+  BannedBy            String?  @db.Text
+  BanReason           String?  @db.Text
+  Ignores             String?  @db.Text
+  Vanish              String?  @db.Text
+  Economy             String?  @db.Text
+  Mail                String?  @db.MediumText
+  FlightCharge        Float?
+  UserMeta            String?  @db.Text
+  Flying              Boolean?
+  Votifier            Int?
+  Jail                String?  @db.Text
+  JailedUntil         BigInt?
+  FakeAccount         Boolean?
+  PlaytimeOptimized   BigInt?
+  flightChargeEnabled Boolean?
+  JailReason          String?  @db.Text
+  Skin                String?  @db.Text
+  Collision           Boolean?
+  NamePrefix          String?  @db.Text
+  NameSuffix          String?  @db.Text
+  Warnings            String?  @db.Text
+  NameColor           String?  @db.Text
+  Muted               String?  @db.Text
+  AFRecharge          String?  @db.Text
+  DisplayName         String?  @db.Text
+  Options             String?  @db.Text
+  ChatColor           String?  @db.Text
+
+  @@map("CMI_users")
+}
